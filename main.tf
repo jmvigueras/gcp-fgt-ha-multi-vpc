@@ -29,6 +29,7 @@ module "fgt_config" {
   config_fgsp = local.cluster_type == "fgsp" ? true : false
 
   config_xlb = true
+  #elb_ips    = { "port2" = google_compute_address.elb_frontend_ip.address }
 }
 #------------------------------------------------------------------------------------------------------------
 # Create FGTs instances
